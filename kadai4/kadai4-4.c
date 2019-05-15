@@ -27,7 +27,7 @@ static void display(void) {
       if (j) {
         printf("  ");
       }
-      printf("\t%d", a[i][j]);
+      printf("%2d", a[i][j]);
     }
     putchar('\n');
   }
