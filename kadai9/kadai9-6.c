@@ -17,8 +17,8 @@ void load(char *fname, int m, int n, float *A, float *b) {
     exit(1);
   }
 
-  fread(A, m * n, sizeof(float), fp);
-  fread(b, m, sizeof(float), fp);
+  fread(A, sizeof(float), m * n, fp);
+  fread(b, sizeof(float), m, fp);
 
   fclose(fp);
 }
