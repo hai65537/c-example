@@ -23,8 +23,8 @@ void save(char *fname, int m, int n, float *A, float *b) {
     exit(1);
   }
 
-  fwrite(A, m * n, sizeof(float), fp);
-  fwrite(b, m, sizeof(float), fp);
+  fwrite(A, sizeof(float), m * n, fp);
+  fwrite(b, sizeof(float), m, fp);
 
   fclose(fp);
 }
